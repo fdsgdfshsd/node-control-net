@@ -1,3 +1,8 @@
+try:
+    from . import prestartup_script
+except Exception as e:
+    print(f"Ошибка при выполнении prepare_environment: {e}")
+
 import sys, os
 from .utils import here, define_preprocessor_inputs, INPUT
 from pathlib import Path
